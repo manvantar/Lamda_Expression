@@ -9,8 +9,12 @@ public class LamdaExpression {
 
 	public static void main(String[] args) {
 	
-		Lamda checkString=(String value) -> Pattern.matches("^[A-Z a-z]{3,25}$",value);
-		System.out.println(checkString.eval("Man"));
+		Lamda checkName=(String value) -> Pattern.matches("^[A-Z a-z]{3,25}$",value);
+		System.out.println("Checking name "+checkName.eval("Man"));
+		Lamda checkEmail=(String value) -> Pattern.matches("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$",value);
+		System.out.println("Checking email "+checkEmail.eval("manukvshetty@gmail.com"));
+		
+		
 	}
 	
 
