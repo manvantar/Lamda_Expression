@@ -15,8 +15,8 @@ public class LamdaExpression {
 		System.out.println("Checking email "+checkEmail.eval("manukvshetty@gmail.com"));
 		Lamda checkMobileNum=(String value) -> Pattern.matches("[0-9]{2,3}[ ]{1}[0-9]{10}+$",value);
 		System.out.println("Checking mobileNumber "+ checkMobileNum.eval("912 9663393660"));
-		Lamda checkPassword=(String value) -> Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z\\d]{8,}",value);
-		System.out.println("checking Password "+ checkPassword.eval("nwWw4ewe"));
+		Lamda checkPassword=(String value) -> Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[a-zA-Z\\d@$!%*?&]{8,}",value);
+		System.out.println("checking Password "+ checkPassword.eval("nwWw4@ewe"));
 	}
 	
 
