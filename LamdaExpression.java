@@ -13,7 +13,8 @@ public class LamdaExpression {
 		System.out.println("Checking name "+checkName.eval("Man"));
 		Lamda checkEmail=(String value) -> Pattern.matches("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$",value);
 		System.out.println("Checking email "+checkEmail.eval("manukvshetty@gmail.com"));
-		
+		Lamda checkMobileNum=(String value) -> Pattern.matches("[0-9]{2,3}[ ]{1}[0-9]{10}+$",value);
+		System.out.println("Checking mobileNumber "+ checkMobileNum.eval("912 9663393660"));
 		
 	}
 	
